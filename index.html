@@ -2199,6 +2199,176 @@
     </div>
 </section>
 
+<!-- Charity Work Section -->
+<section class="section charity" id="charity">
+    <div class="container">
+        <div class="section-header slide-up">
+            <h2 class="section-title">Our Charity Work</h2>
+            <p>At Eldred Virtual Solutions, we believe in giving back to the community. Here are some highlights from our philanthropic initiatives.</p>
+        </div>
+        
+        <div class="charity-grid">
+            <!-- Charity Item 1 -->
+            <div class="charity-item slide-up delay-1 tilt-effect">
+                <div class="charity-image">
+                    <img src="https://i.pinimg.com/736x/5b/4b/87/5b4b87a6c8e0a8a1a8a3e3e3e3e3e3e3.jpg" alt="Charity Event 1">
+                    <div class="charity-overlay">
+                        <h3>Education for All</h3>
+                        <p>Sponsoring school supplies for underprivileged children in local communities.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Charity Item 2 -->
+            <div class="charity-item slide-up delay-2 tilt-effect">
+                <div class="charity-image">
+                    <img src="https://i.pinimg.com/736x/9a/9b/9c/9a9b9c8e0a8a1a8a3e3e3e3e3e3e3e3.jpg" alt="Charity Event 2">
+                    <div class="charity-overlay">
+                        <h3>Community Feeding</h3>
+                        <p>Monthly food drives serving hundreds of families in need.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Charity Item 3 -->
+            <div class="charity-item slide-up delay-3 tilt-effect">
+                <div class="charity-image">
+                    <img src="https://i.pinimg.com/736x/8a/8b/9c/8a8b9c8e0a8a1a8a3e3e3e3e3e3e3e3.jpg" alt="Charity Event 3">
+                    <div class="charity-overlay">
+                        <h3>Disaster Relief</h3>
+                        <p>Providing emergency support to communities affected by natural disasters.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Charity Item 4 -->
+            <div class="charity-item slide-up delay-4 tilt-effect">
+                <div class="charity-image">
+                    <img src="https://i.pinimg.com/736x/7a/7b/9c/7a7b9c8e0a8a1a8a3e3e3e3e3e3e3e3.jpg" alt="Charity Event 4">
+                    <div class="charity-overlay">
+                        <h3>Environmental Cleanup</h3>
+                        <p>Organizing beach and park cleanups to protect our environment.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="charity-cta slide-up">
+            <p>Want to join us in making a difference? <a href="#contact" class="underline-animation">Contact us</a> to learn about our upcoming charity events.</p>
+        </div>
+    </div>
+</section>
+
+/* Charity Work Section */
+.charity {
+    background-color: var(--lighter);
+    position: relative;
+    overflow: hidden;
+}
+
+.charity:before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
+    opacity: 0.05;
+    z-index: 0;
+}
+
+.charity-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    position: relative;
+    z-index: 1;
+}
+
+.charity-header p {
+    color: var(--text-light);
+    font-size: 1.1rem;
+}
+
+.charity-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.charity-item {
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.charity-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.charity-image {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+}
+
+.charity-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.charity-item:hover .charity-image img {
+    transform: scale(1.1);
+}
+
+.charity-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    color: white;
+    padding: 2rem 1.5rem 1.5rem;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.charity-item:hover .charity-overlay {
+    transform: translateY(0);
+}
+
+.charity-overlay h3 {
+    color: white;
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+}
+
+.charity-overlay p {
+    color: rgba(255,255,255,0.8);
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+
+.charity-cta {
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 1.1rem;
+    color: var(--text);
+}
+
+.charity-cta a {
+    color: var(--primary);
+    font-weight: 600;
+}
+
     <!-- CTA Section -->
     <section class="section cta">
         <div class="cta-container slide-up floating">
