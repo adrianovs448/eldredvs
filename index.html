@@ -39,6 +39,10 @@
             --warning: #f59e0b;
             --glass-bg: rgba(255, 255, 255, 0.15);
             --glass-border: rgba(255, 255, 255, 0.2);
+--charity-bg: #f9fafb;
+    --charity-overlay-bg: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    --charity-text: #374151;
+    --charity-cta-text: #2563eb;
         }
 
         /* Dark Mode Color Scheme */
@@ -63,6 +67,10 @@
             --service-card-bg: #1f2937;
             --glass-bg: rgba(17, 24, 39, 0.3);
             --glass-border: rgba(255, 255, 255, 0.1);
+--charity-bg: #1f2937;
+    --charity-overlay-bg: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+    --charity-text: #d1d5db;
+    --charity-cta-text: #3b82f6;
         }
 
         /* Base Styles */
@@ -1456,8 +1464,9 @@
             color: var(--warning);
         }
 /* Charity Work Section */
+/* Charity Work Section */
 .charity {
-    background-color: var(--lighter);
+    background-color: var(--charity-bg);
     position: relative;
     overflow: hidden;
 }
@@ -1501,6 +1510,7 @@
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     transition: all 0.3s ease;
     position: relative;
+    background-color: var(--card-bg);
 }
 
 .charity-item:hover {
@@ -1530,7 +1540,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    background: var(--charity-overlay-bg);
     color: white;
     padding: 2rem 1.5rem 1.5rem;
     transform: translateY(100%);
@@ -1557,14 +1567,13 @@
     text-align: center;
     margin-top: 3rem;
     font-size: 1.1rem;
-    color: var(--text);
+    color: var(--charity-text);
 }
 
 .charity-cta a {
-    color: var(--primary);
+    color: var(--charity-cta-text);
     font-weight: 600;
 }
-
 
         /* Responsive Styles */
         @media (max-width: 1200px) {
@@ -2310,6 +2319,7 @@
 </section>
 
 <!-- Charity Work Section -->
+<!-- Charity Work Section -->
 <section class="section charity" id="charity">
     <div class="container">
         <div class="section-header slide-up">
@@ -2321,10 +2331,10 @@
             <!-- Charity Item 1 -->
             <div class="charity-item slide-up delay-1 tilt-effect">
                 <div class="charity-image">
-                    <img src="https://i.pinimg.com/736x/21/30/31/213031c034d4a9b166ea4ee2fb46dc67.jpg" alt="Charity Event 1">
+                    <img src="https://i.pinimg.com/736x/63/84/b9/6384b9153db9c90d9aadffc6296187f5.jpg" alt="Charity Event 1">
                     <div class="charity-overlay">
-                        <h3>Food for All</h3>
-                        <p>Sponsoring food supplies for underprivileged children in local communities.</p>
+                        <h3>Education for All</h3>
+                        <p>Sponsoring school supplies for underprivileged children in local communities.</p>
                     </div>
                 </div>
             </div>
@@ -2332,10 +2342,10 @@
             <!-- Charity Item 2 -->
             <div class="charity-item slide-up delay-2 tilt-effect">
                 <div class="charity-image">
-                    <img src="blob:https://ph.pinterest.com/4b213b83-b821-48ed-9e74-0ba9331e1291" alt="Charity Event 2">
+                    <img src="https://i.pinimg.com/736x/21/30/31/213031c034d4a9b166ea4ee2fb46dc67.jpg" alt="Charity Event 2">
                     <div class="charity-overlay">
                         <h3>Community Feeding</h3>
-                        <p>Monthly food drives serve hundreds of families in need.</p>
+                        <p>Monthly food drives serving hundreds of families in need.</p>
                     </div>
                 </div>
             </div>
@@ -2354,7 +2364,7 @@
             <!-- Charity Item 4 -->
             <div class="charity-item slide-up delay-4 tilt-effect">
                 <div class="charity-image">
-                    <img src="https://i.pinimg.com/736x/7a/7b/9c/7a7b9c8e0a8a1a8a3e3e3e3e3e3e3e3.jpg" alt="Charity Event 4">
+                    <img src="https://i.pinimg.com/736x/93/26/f9/9326f9f0ee39a954f8a76db50ed3e2f8.jpg" alt="Charity Event 4">
                     <div class="charity-overlay">
                         <h3>Environmental Cleanup</h3>
                         <p>Organizing beach and park cleanups to protect our environment.</p>
@@ -2368,7 +2378,6 @@
         </div>
     </div>
 </section>
-
 
     <!-- CTA Section -->
     <section class="section cta">
