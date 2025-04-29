@@ -1455,6 +1455,116 @@
             border-left: 4px solid var(--warning);
             color: var(--warning);
         }
+/* Charity Work Section */
+.charity {
+    background-color: var(--lighter);
+    position: relative;
+    overflow: hidden;
+}
+
+.charity:before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
+    opacity: 0.05;
+    z-index: 0;
+}
+
+.charity-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    position: relative;
+    z-index: 1;
+}
+
+.charity-header p {
+    color: var(--text-light);
+    font-size: 1.1rem;
+}
+
+.charity-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.charity-item {
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.charity-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.charity-image {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+}
+
+.charity-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.charity-item:hover .charity-image img {
+    transform: scale(1.1);
+}
+
+.charity-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    color: white;
+    padding: 2rem 1.5rem 1.5rem;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.charity-item:hover .charity-overlay {
+    transform: translateY(0);
+}
+
+.charity-overlay h3 {
+    color: white;
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+}
+
+.charity-overlay p {
+    color: rgba(255,255,255,0.8);
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+
+.charity-cta {
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 1.1rem;
+    color: var(--text);
+}
+
+.charity-cta a {
+    color: var(--primary);
+    font-weight: 600;
+}
+
 
         /* Responsive Styles */
         @media (max-width: 1200px) {
@@ -2259,115 +2369,6 @@
     </div>
 </section>
 
-/* Charity Work Section */
-.charity {
-    background-color: var(--lighter);
-    position: relative;
-    overflow: hidden;
-}
-
-.charity:before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    right: -50%;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
-    opacity: 0.05;
-    z-index: 0;
-}
-
-.charity-header {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto 3rem;
-    position: relative;
-    z-index: 1;
-}
-
-.charity-header p {
-    color: var(--text-light);
-    font-size: 1.1rem;
-}
-
-.charity-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    position: relative;
-    z-index: 1;
-}
-
-.charity-item {
-    border-radius: 1rem;
-    overflow: hidden;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    transition: all 0.3s ease;
-    position: relative;
-}
-
-.charity-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-}
-
-.charity-image {
-    position: relative;
-    height: 300px;
-    overflow: hidden;
-}
-
-.charity-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.charity-item:hover .charity-image img {
-    transform: scale(1.1);
-}
-
-.charity-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
-    color: white;
-    padding: 2rem 1.5rem 1.5rem;
-    transform: translateY(100%);
-    transition: transform 0.3s ease;
-}
-
-.charity-item:hover .charity-overlay {
-    transform: translateY(0);
-}
-
-.charity-overlay h3 {
-    color: white;
-    margin-bottom: 0.5rem;
-    font-size: 1.25rem;
-}
-
-.charity-overlay p {
-    color: rgba(255,255,255,0.8);
-    font-size: 0.9rem;
-    margin-bottom: 0;
-}
-
-.charity-cta {
-    text-align: center;
-    margin-top: 3rem;
-    font-size: 1.1rem;
-    color: var(--text);
-}
-
-.charity-cta a {
-    color: var(--primary);
-    font-weight: 600;
-}
 
     <!-- CTA Section -->
     <section class="section cta">
