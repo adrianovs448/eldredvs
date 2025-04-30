@@ -1979,6 +1979,301 @@
         .floating {
             animation: floating 3s ease-in-out infinite;
         }
+/* Team Section Styles */
+.team {
+    background-color: var(--card-bg);
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.team-member {
+    background-color: var(--service-card-bg);
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.team-photo {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+}
+
+.team-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.team-member:hover .team-photo img {
+    transform: scale(1.1);
+}
+
+.team-social {
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    transition: all 0.3s ease;
+}
+
+.team-member:hover .team-social {
+    bottom: 0;
+}
+
+.team-social a {
+    width: 40px;
+    height: 40px;
+    background: var(--primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.team-social a:hover {
+    background: white;
+    color: var(--primary);
+    transform: translateY(-5px);
+}
+
+.team-info {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.team-info h3 {
+    margin-bottom: 0.5rem;
+    color: var(--dark);
+}
+
+.team-info .position {
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.team-info .bio {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+
+/* Process Section Styles */
+.process {
+    background-color: var(--light);
+    position: relative;
+    overflow: hidden;
+}
+
+.process-steps {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.process-steps:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50px;
+    height: 100%;
+    width: 4px;
+    background: linear-gradient(to bottom, var(--primary), var(--secondary));
+    z-index: 1;
+}
+
+.step {
+    position: relative;
+    margin-bottom: 2rem;
+    padding-left: 100px;
+    z-index: 2;
+}
+
+.step-number {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+    border: 4px solid var(--bg);
+}
+
+.step-content {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.step-content h3 {
+    margin-bottom: 0.5rem;
+    color: var(--dark);
+}
+
+.step-content p {
+    color: var(--text-light);
+    margin-bottom: 0;
+}
+
+/* Technology Stack Styles */
+.tech-stack {
+    background-color: var(--bg);
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.tech-category {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.tech-category h3 {
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--dark);
+}
+
+.tech-category h3 i {
+    color: var(--primary);
+}
+
+.tech-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1rem;
+}
+
+.tech-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    background-color: var(--light);
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.tech-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+}
+
+.tech-item img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.tech-item:hover img {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+.tech-item span {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    text-align: center;
+}
+
+/* Enhanced Button Effects */
+.btn-3d {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.btn-3d:hover {
+    transform: translateY(-5px) rotateX(10deg);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
+/* Enhanced Card Shadows */
+.service-card, .feature-item, .contact-detail {
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.service-card:hover, .feature-item:hover, .contact-detail:hover {
+    box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .process-steps:before {
+        left: 25px;
+    }
+    
+    .step {
+        padding-left: 70px;
+    }
+    
+    .step-number {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+    
+    .tech-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Micro-interactions */
+input:focus, textarea:focus, select:focus {
+    border-color: var(--primary) !important;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2) !important;
+}
+
+/* Enhanced focus states for accessibility */
+a:focus, button:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
+/* Smooth transitions for theme changes */
+body, .service-card, .feature-item, .contact-detail, .testimonial {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
 
         @keyframes floating {
             0%, 100% { transform: translateY(0); }
@@ -2441,6 +2736,183 @@
             </div>
         </div>
     </section>
+<section class="section team" id="team">
+    <div class="container">
+        <h2 class="section-title text-center">Our Leadership Team</h2>
+        <p class="text-center" style="max-width: 800px; margin: 0 auto 3rem;">Meet the experienced professionals driving our success and innovation in the BPO industry.</p>
+        
+        <div class="team-grid">
+            <!-- Team Member 1 -->
+            <div class="team-member tilt-effect">
+                <div class="team-photo">
+                    <img src="https://i.pinimg.com/736x/df/16/de/df16de53bb3a081f2646dd4178be73e3.jpg" alt="CEO">
+                    <div class="team-social">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="team-info">
+                    <h3>John Eldred</h3>
+                    <p class="position">Founder & CEO</p>
+                    <p class="bio">20+ years in business process optimization and virtual staffing solutions.</p>
+                </div>
+            </div>
+            
+            <!-- Team Member 2 -->
+            <div class="team-member tilt-effect">
+                <div class="team-photo">
+                    <img src="https://i.pinimg.com/736x/c8/dc/3c/c8dc3c28012d7f7d8b90d8138ff9bbbd.jpg" alt="COO">
+                    <div class="team-social">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="team-info">
+                    <h3>Sarah Johnson</h3>
+                    <p class="position">Chief Operations Officer</p>
+                    <p class="bio">Operations specialist with 15 years in global service delivery.</p>
+                </div>
+            </div>
+            
+            <!-- Team Member 3 -->
+            <div class="team-member tilt-effect">
+                <div class="team-photo">
+                    <img src="https://i.pinimg.com/736x/94/9c/81/949c811e1c1836900d0d60d1420ea27d.jpg" alt="CTO">
+                    <div class="team-social">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="team-info">
+                    <h3>Michael Chen</h3>
+                    <p class="position">Chief Technology Officer</p>
+                    <p class="bio">Tech visionary specializing in BPO automation and AI integration.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section process">
+    <div class="container">
+        <h2 class="section-title text-center">Our Proven Process</h2>
+        <p class="text-center" style="max-width: 800px; margin: 0 auto 3rem;">We follow a structured approach to ensure seamless integration with your business operations.</p>
+        
+        <div class="process-steps">
+            <!-- Step 1 -->
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Discovery</h3>
+                    <p>We analyze your business needs and requirements through detailed consultations.</p>
+                </div>
+            </div>
+            
+            <!-- Step 2 -->
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Custom Solution</h3>
+                    <p>We design a tailored outsourcing strategy matching your specific needs.</p>
+                </div>
+            </div>
+            
+            <!-- Step 3 -->
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Talent Matching</h3>
+                    <p>We select and train the perfect virtual professionals for your requirements.</p>
+                </div>
+            </div>
+            
+            <!-- Step 4 -->
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3>Implementation</h3>
+                    <p>Seamless onboarding and integration with your existing systems and processes.</p>
+                </div>
+            </div>
+            
+            <!-- Step 5 -->
+            <div class="step">
+                <div class="step-number">5</div>
+                <div class="step-content">
+                    <h3>Ongoing Support</h3>
+                    <p>Continuous monitoring, quality assurance, and performance optimization.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section tech-stack">
+    <div class="container">
+        <h2 class="section-title text-center">Our Technology Stack</h2>
+        <p class="text-center" style="max-width: 800px; margin: 0 auto 3rem;">We leverage cutting-edge technologies to deliver secure, efficient, and scalable solutions.</p>
+        
+        <div class="tech-grid">
+            <!-- Tech Category 1 -->
+            <div class="tech-category">
+                <h3><i class="fas fa-shield-alt"></i> Security</h3>
+                <div class="tech-items">
+                    <div class="tech-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Cloudflare_Logo.svg/1200px-Cloudflare_Logo.svg.png" alt="Cloudflare">
+                        <span>Cloudflare</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/AWS_Simple_Icons_AWS_Cloud.svg/1200px-AWS_Simple_Icons_AWS_Cloud.svg.png" alt="AWS">
+                        <span>AWS Security</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Symantec_logo10.svg/1200px-Symantec_logo10.svg.png" alt="Symantec">
+                        <span>Symantec</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tech Category 2 -->
+            <div class="tech-category">
+                <h3><i class="fas fa-cloud"></i> Cloud Platforms</h3>
+                <div class="tech-items">
+                    <div class="tech-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Google_Cloud_Platform_logo.svg/1200px-Google_Cloud_Platform_logo.svg.png" alt="GCP">
+                        <span>Google Cloud</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/1200px-Amazon_Web_Services_Logo.svg.png" alt="AWS">
+                        <span>AWS</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Microsoft_Azure.svg/1200px-Microsoft_Azure.svg.png" alt="Azure">
+                        <span>Azure</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tech Category 3 -->
+            <div class="tech-category">
+                <h3><i class="fas fa-tools"></i> Productivity</h3>
+                <div class="tech-items">
+                    <div class="tech-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Google_Keep_icon_%282020%29.svg/1200px-Google_Keep_icon_%282020%29.svg.png" alt="Google Workspace">
+                        <span>Google Workspace</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Microsoft_Office_2013.svg/1200px-Microsoft_Office_2013.svg.png" alt="Office 365">
+                        <span>Office 365</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Zoom_Communications_Logo.svg/1200px-Zoom_Communications_Logo.svg.png" alt="Zoom">
+                        <span>Zoom</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
 
     <!-- CTA Section -->
     <section class="section cta">
@@ -3035,6 +3507,134 @@
                 }
             }, 30);
         }
+// Add this to your existing script
+
+// Dynamic copyright year
+document.querySelector('.footer-bottom p').innerHTML = 
+    document.querySelector('.footer-bottom p').innerHTML.replace('2023', new Date().getFullYear());
+
+// Lazy loading for images
+document.addEventListener("DOMContentLoaded", function() {
+    const lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
+    
+    if ("IntersectionObserver" in window) {
+        let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    let lazyImage = entry.target;
+                    lazyImage.src = lazyImage.dataset.src;
+                    lazyImage.classList.remove("lazy");
+                    lazyImageObserver.unobserve(lazyImage);
+                }
+            });
+        });
+
+        lazyImages.forEach(function(lazyImage) {
+            lazyImageObserver.observe(lazyImage);
+        });
+    }
+});
+
+// Form validation
+function validateForm(form) {
+    let valid = true;
+    const inputs = form.querySelectorAll('input[required], textarea[required], select[required]');
+    
+    inputs.forEach(input => {
+        if (!input.value.trim()) {
+            input.style.borderColor = 'var(--error)';
+            valid = false;
+        } else {
+            input.style.borderColor = '';
+        }
+        
+        // Email validation
+        if (input.type === 'email' && input.value) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(input.value)) {
+                input.style.borderColor = 'var(--error)';
+                valid = false;
+            }
+        }
+    });
+    
+    return valid;
+}
+
+// Enhanced mobile menu
+function handleMobileMenu() {
+    const nav = document.getElementById('nav');
+    const body = document.body;
+    
+    if (window.innerWidth <= 768) {
+        nav.addEventListener('click', (e) => {
+            if (e.target.tagName === 'A') {
+                body.style.overflow = 'auto';
+            }
+        });
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            if (nav.classList.contains('active')) {
+                body.style.overflow = 'auto';
+            } else {
+                body.style.overflow = 'hidden';
+            }
+        });
+    } else {
+        body.style.overflow = 'auto';
+    }
+}
+
+window.addEventListener('resize', handleMobileMenu);
+handleMobileMenu();
+
+// Enhanced tooltips
+function initTooltips() {
+    const tooltips = document.querySelectorAll('[data-tooltip]');
+    
+    tooltips.forEach(el => {
+        const tooltip = document.createElement('div');
+        tooltip.className = 'custom-tooltip';
+        tooltip.textContent = el.getAttribute('data-tooltip');
+        document.body.appendChild(tooltip);
+        
+        el.addEventListener('mouseenter', (e) => {
+            const rect = el.getBoundingClientRect();
+            tooltip.style.left = `${rect.left + rect.width/2}px`;
+            tooltip.style.top = `${rect.top - 40}px`;
+            tooltip.style.transform = 'translateX(-50%)';
+            tooltip.style.opacity = '1';
+        });
+        
+        el.addEventListener('mouseleave', () => {
+            tooltip.style.opacity = '0';
+        });
+    });
+}
+
+// Initialize tooltips if needed
+// initTooltips();
+
+// Cookie consent banner
+function initCookieConsent() {
+    if (!localStorage.getItem('cookieConsent')) {
+        const banner = document.createElement('div');
+        banner.className = 'cookie-banner';
+        banner.innerHTML = `
+            <p>We use cookies to enhance your experience. By continuing to visit this site, you agree to our use of cookies.</p>
+            <button class="btn btn-primary btn-sm" id="acceptCookies">Accept</button>
+        `;
+        document.body.appendChild(banner);
+        
+        document.getElementById('acceptCookies').addEventListener('click', () => {
+            localStorage.setItem('cookieConsent', 'true');
+            banner.style.display = 'none';
+        });
+    }
+}
+
+// Initialize cookie consent
+// initCookieConsent();
         
         // Start loader animation
         updateLoaderPercentage();
