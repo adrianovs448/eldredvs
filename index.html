@@ -7,16 +7,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Modern Color Scheme - Light Mode (Default) */
+        /* Modern Techy Color Scheme - Light Mode (Default) */
         :root {
             --primary: #2563eb;      /* Vibrant blue */
             --primary-light: #3b82f6;
             --primary-dark: #1e40af;
-            --secondary: #f97316;     /* Orange */
-            --secondary-light: #fb923c;
-            --secondary-dark: #ea580c;
+            --secondary: #10b981;    /* Emerald green */
+            --secondary-light: #34d399;
+            --secondary-dark: #059669;
             --accent: #f59e0b;       /* Amber */
             --dark: #1f2937;         /* Dark gray */
             --darker: #111827;
@@ -27,8 +27,8 @@
             --white: #ffffff;
             --bg: #ffffff;
             --card-bg: #ffffff;
-            --footer-bg: #1f2937;
-            --header-bg: rgba(255, 255, 255, 0.95);
+            --footer-bg: #0f172a;
+            --header-bg: rgba(255, 255, 255, 0.97);
             --nav-link: var(--dark);
             --form-bg: #ffffff;
             --input-bg: #ffffff;
@@ -39,38 +39,41 @@
             --warning: #f59e0b;
             --glass-bg: rgba(255, 255, 255, 0.15);
             --glass-border: rgba(255, 255, 255, 0.2);
---charity-bg: #f9fafb;
-    --charity-overlay-bg: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
-    --charity-text: #374151;
-    --charity-cta-text: #2563eb;
+            --charity-bg: #f9fafb;
+            --charity-overlay-bg: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            --charity-text: #374151;
+            --charity-cta-text: #2563eb;
+            --tech-grid: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0icmdiYSgwLDAsMCwwLjAzKSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNwYXR0ZXJuKSIvPjwvc3ZnPg==');
+            --tech-glow: 0 0 10px rgba(59, 130, 246, 0.3);
         }
 
         /* Dark Mode Color Scheme */
         [data-theme="dark"] {
             --primary: #3b82f6;      /* Lighter blue */
             --primary-dark: #1e40af;
-            --secondary: #f97316;     /* Orange */
+            --secondary: #10b981;    /* Emerald green */
             --accent: #f59e0b;       /* Amber */
             --dark: #e5e7eb;         /* Light gray */
             --light: #1f2937;        /* Dark gray */
             --text: #d1d5db;         /* Light text */
             --text-light: #9ca3af;
             --white: #111827;
-            --bg: #111827;
-            --card-bg: #1f2937;
-            --footer-bg: #030712;
-            --header-bg: rgba(17, 24, 39, 0.95);
+            --bg: #0f172a;           /* Dark blue-gray */
+            --card-bg: #1e293b;
+            --footer-bg: #020617;
+            --header-bg: rgba(15, 23, 42, 0.97);
             --nav-link: var(--dark);
-            --form-bg: #1f2937;
-            --input-bg: #374151;
-            --testimonial-bg: #1f2937;
-            --service-card-bg: #1f2937;
-            --glass-bg: rgba(17, 24, 39, 0.3);
+            --form-bg: #1e293b;
+            --input-bg: #334155;
+            --testimonial-bg: #1e293b;
+            --service-card-bg: #1e293b;
+            --glass-bg: rgba(30, 41, 59, 0.3);
             --glass-border: rgba(255, 255, 255, 0.1);
---charity-bg: #1f2937;
-    --charity-overlay-bg: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
-    --charity-text: #d1d5db;
-    --charity-cta-text: #3b82f6;
+            --charity-bg: #1e293b;
+            --charity-overlay-bg: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+            --charity-text: #d1d5db;
+            --charity-cta-text: #3b82f6;
+            --tech-glow: 0 0 15px rgba(59, 130, 246, 0.5);
         }
 
         /* Base Styles */
@@ -78,7 +81,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: 'Space Grotesk', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
         }
 
         body {
@@ -88,12 +91,14 @@
             overflow-x: hidden;
             transition: background-color 0.3s ease, color 0.3s ease;
             scroll-behavior: smooth;
+            background-image: var(--tech-grid);
         }
 
         h1, h2, h3, h4 {
             font-weight: 700;
             line-height: 1.2;
             color: var(--dark);
+            letter-spacing: -0.5px;
         }
 
         a {
@@ -121,18 +126,19 @@
             gap: 0.5rem;
             position: relative;
             overflow: hidden;
+            font-family: 'Space Grotesk', sans-serif;
         }
 
         .btn-primary {
             background-color: var(--primary);
             color: white;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            box-shadow: var(--tech-glow), 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         }
 
         .btn-primary:hover {
             background-color: var(--primary-dark);
             transform: translateY(-2px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            box-shadow: var(--tech-glow), 0 10px 15px -3px rgba(0, 0, 0, 0.1);
         }
 
         .btn-secondary {
@@ -185,6 +191,9 @@
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
+            font-family: 'Space Grotesk', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .section-title:after {
@@ -216,6 +225,7 @@
             font-size: 1.5rem;
             color: var(--dark);
             transition: all 0.3s ease;
+            font-family: 'Space Grotesk', sans-serif;
         }
 
         .logo:hover {
@@ -235,6 +245,7 @@
             position: relative;
             overflow: hidden;
             transition: all 0.5s ease;
+            font-family: 'Space Grotesk', sans-serif;
         }
 
         .logo-icon span {
@@ -276,6 +287,7 @@
             backdrop-filter: blur(10px);
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
         }
 
         header.scrolled {
@@ -307,6 +319,10 @@
             position: relative;
             padding: 0.5rem 0;
             transition: all 0.3s ease;
+            font-family: 'Space Grotesk', sans-serif;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
         }
 
         nav ul li a:after {
@@ -365,7 +381,7 @@
 
         /* Hero Section */
         .hero {
-            background-image: linear-gradient(135deg, rgba(37, 99, 235, 0.9), rgba(249, 115, 22, 0.8)),
+            background-image: linear-gradient(135deg, rgba(37, 99, 235, 0.9), rgba(16, 185, 129, 0.8)),
                         url('https://i.pinimg.com/736x/bf/ff/32/bfff32999b61ca61fbbfd51c964a6f02.jpg?auto=format&fit=crop&w=1350&q=80');
             background-size: cover;
             background-position: center;
@@ -411,6 +427,9 @@
             line-height: 1.1;
             color: white;
             font-weight: 800;
+            font-family: 'Space Grotesk', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .hero p {
@@ -418,6 +437,7 @@
             margin-bottom: 2rem;
             opacity: 0.9;
             color: rgba(255, 255, 255, 0.9);
+            font-family: 'Inter', sans-serif;
         }
 
         .hero-buttons {
@@ -498,11 +518,13 @@
             background-color: var(--card-bg);
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
             transition: all 0.3s ease;
+            border: 1px solid rgba(0,0,0,0.05);
         }
 
         .feature-item:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+            border-color: var(--primary);
         }
 
         .feature-icon {
@@ -540,6 +562,7 @@
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
             transform-style: preserve-3d;
             perspective: 1000px;
+            border: 1px solid rgba(0,0,0,0.1);
         }
 
         .about-image img {
@@ -576,8 +599,8 @@
             position: absolute;
             top: -50%;
             left: -50%;
-            width: 200%;
-            height: 200%;
+            width: 100%;
+            height: 100%;
             background: radial-gradient(circle, var(--primary-light) 0%, transparent 70%);
             opacity: 0.05;
             z-index: 0;
@@ -728,6 +751,7 @@
             margin-bottom: 0.5rem;
             font-weight: 700;
             color: white;
+            font-family: 'Space Grotesk', sans-serif;
         }
 
         .stat-item p {
@@ -943,19 +967,19 @@
         }
 
         .client-logo {
-    height: 50px;
-    opacity: 0.6;
-    filter: grayscale(100%);
-    transition: all 0.3s ease;
-    object-fit: contain;
-    padding: 0 20px;
-}
+            height: 50px;
+            opacity: 0.6;
+            filter: grayscale(100%);
+            transition: all 0.3s ease;
+            object-fit: contain;
+            padding: 0 20px;
+        }
 
-.client-logo:hover {
-    opacity: 1;
-    filter: grayscale(0%);
-    transform: scale(1.1);
-}
+        .client-logo:hover {
+            opacity: 1;
+            filter: grayscale(0%);
+            transform: scale(1.1);
+        }
 
         /* CTA Section */
         .cta {
@@ -998,6 +1022,9 @@
             margin-bottom: 1.5rem;
             color: white;
             font-weight: 800;
+            font-family: 'Space Grotesk', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .cta p {
@@ -1075,11 +1102,13 @@
             border-radius: 0.5rem;
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
             transition: all 0.3s ease;
+            border: 1px solid rgba(0,0,0,0.05);
         }
 
         .contact-detail:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+            border-color: var(--primary);
         }
 
         .contact-icon {
@@ -1166,6 +1195,7 @@
             transition: all 0.3s ease;
             background-color: var(--input-bg);
             color: var(--text);
+            font-family: 'Inter', sans-serif;
         }
 
         .form-control:focus {
@@ -1229,6 +1259,7 @@
             position: relative;
             display: inline-block;
             color: white;
+            font-family: 'Space Grotesk', sans-serif;
         }
 
         .footer-col h4:after {
@@ -1278,6 +1309,7 @@
             background-color: rgba(255,255,255,0.1);
             color: white;
             font-size: 1rem;
+            font-family: 'Inter', sans-serif;
         }
 
         .newsletter-form input::placeholder {
@@ -1375,6 +1407,7 @@
             font-size: 2.5rem;
             margin: 0 auto 1.5rem;
             animation: pulse 1.5s infinite ease-in-out;
+            font-family: 'Space Grotesk', sans-serif;
         }
 
         .loader-bar {
@@ -1463,117 +1496,149 @@
             border-left: 4px solid var(--warning);
             color: var(--warning);
         }
-/* Charity Work Section */
-/* Charity Work Section */
-.charity {
-    background-color: var(--charity-bg);
-    position: relative;
-    overflow: hidden;
-}
 
-.charity:before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    right: -50%;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
-    opacity: 0.05;
-    z-index: 0;
-}
+        /* Charity Work Section */
+        .charity {
+            background-color: var(--charity-bg);
+            position: relative;
+            overflow: hidden;
+        }
 
-.charity-header {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto 3rem;
-    position: relative;
-    z-index: 1;
-}
+        .charity:before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
+            opacity: 0.05;
+            z-index: 0;
+        }
 
-.charity-header p {
-    color: var(--text-light);
-    font-size: 1.1rem;
-}
+        .charity-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            position: relative;
+            z-index: 1;
+        }
 
-.charity-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    position: relative;
-    z-index: 1;
-}
+        .charity-header p {
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
 
-.charity-item {
-    border-radius: 1rem;
-    overflow: hidden;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    transition: all 0.3s ease;
-    position: relative;
-    background-color: var(--card-bg);
-}
+        .charity-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            position: relative;
+            z-index: 1;
+        }
 
-.charity-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-}
+        .charity-item {
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+            position: relative;
+            background-color: var(--card-bg);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
 
-.charity-image {
-    position: relative;
-    height: 300px;
-    overflow: hidden;
-}
+        .charity-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            border-color: var(--primary);
+        }
 
-.charity-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
+        .charity-image {
+            position: relative;
+            height: 300px;
+            overflow: hidden;
+        }
 
-.charity-item:hover .charity-image img {
-    transform: scale(1.1);
-}
+        .charity-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
 
-.charity-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: var(--charity-overlay-bg);
-    color: white;
-    padding: 2rem 1.5rem 1.5rem;
-    transform: translateY(100%);
-    transition: transform 0.3s ease;
-}
+        .charity-item:hover .charity-image img {
+            transform: scale(1.1);
+        }
 
-.charity-item:hover .charity-overlay {
-    transform: translateY(0);
-}
+        .charity-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--charity-overlay-bg);
+            color: white;
+            padding: 2rem 1.5rem 1.5rem;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
 
-.charity-overlay h3 {
-    color: white;
-    margin-bottom: 0.5rem;
-    font-size: 1.25rem;
-}
+        .charity-item:hover .charity-overlay {
+            transform: translateY(0);
+        }
 
-.charity-overlay p {
-    color: rgba(255,255,255,0.8);
-    font-size: 0.9rem;
-    margin-bottom: 0;
-}
+        .charity-overlay h3 {
+            color: white;
+            margin-bottom: 0.5rem;
+            font-size: 1.25rem;
+        }
 
-.charity-cta {
-    text-align: center;
-    margin-top: 3rem;
-    font-size: 1.1rem;
-    color: var(--charity-text);
-}
+        .charity-overlay p {
+            color: rgba(255,255,255,0.8);
+            font-size: 0.9rem;
+            margin-bottom: 0;
+        }
 
-.charity-cta a {
-    color: var(--charity-cta-text);
-    font-weight: 600;
-}
+        .charity-cta {
+            text-align: center;
+            margin-top: 3rem;
+            font-size: 1.1rem;
+            color: var(--charity-text);
+        }
+
+        .charity-cta a {
+            color: var(--charity-cta-text);
+            font-weight: 600;
+        }
+
+        /* Techy Elements */
+        .tech-border {
+            position: relative;
+        }
+
+        .tech-border:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+        }
+
+        .tech-grid-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: var(--tech-grid);
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+        .tech-glow {
+            box-shadow: var(--tech-glow);
+        }
 
         /* Responsive Styles */
         @media (max-width: 1200px) {
@@ -2304,80 +2369,78 @@
     </section>
 
     <!-- Clients Section -->
-    <!-- Clients Section -->
-<section class="section clients" id="clients">
-    <div class="container">
-        <h2 class="section-title text-center slide-up">Trusted By Leading Brands</h2>
-        <div class="clients-logos">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/2560px-Amazon_logo.svg.png" class="client-logo slide-up delay-1" alt="Amazon">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/505px-Apple_logo_black.svg.png" class="client-logo slide-up delay-2" alt="Apple">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2560px-Google_2015_logo.svg.png" class="client-logo slide-up delay-3" alt="Google">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Microsoft_logo_%282012%29.svg/2560px-Microsoft_logo_%282012%29.svg.png" class="client-logo slide-up delay-4" alt="Microsoft">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_logo.svg/2560px-IBM_logo.svg.png" class="client-logo slide-up delay-1" alt="IBM">
+    <section class="section clients" id="clients">
+        <div class="container">
+            <h2 class="section-title text-center slide-up">Trusted By Leading Brands</h2>
+            <div class="clients-logos">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/2560px-Amazon_logo.svg.png" class="client-logo slide-up delay-1" alt="Amazon">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/505px-Apple_logo_black.svg.png" class="client-logo slide-up delay-2" alt="Apple">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2560px-Google_2015_logo.svg.png" class="client-logo slide-up delay-3" alt="Google">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Microsoft_logo_%282012%29.svg/2560px-Microsoft_logo_%282012%29.svg.png" class="client-logo slide-up delay-4" alt="Microsoft">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_logo.svg/2560px-IBM_logo.svg.png" class="client-logo slide-up delay-1" alt="IBM">
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Charity Work Section -->
-<!-- Charity Work Section -->
-<section class="section charity" id="charity">
-    <div class="container">
-        <div class="section-header slide-up">
-            <h2 class="section-title">Our Charity Work</h2>
-            <p>At Eldred Virtual Solutions, we believe in giving back to the community. Here are some highlights from our philanthropic initiatives.</p>
-        </div>
-        
-        <div class="charity-grid">
-            <!-- Charity Item 1 -->
-            <div class="charity-item slide-up delay-1 tilt-effect">
-                <div class="charity-image">
-                    <img src="https://i.pinimg.com/736x/63/84/b9/6384b9153db9c90d9aadffc6296187f5.jpg" alt="Charity Event 1">
-                    <div class="charity-overlay">
-                        <h3>Education for All</h3>
-                        <p>Sponsoring school supplies for underprivileged children in local communities.</p>
+    <!-- Charity Work Section -->
+    <section class="section charity" id="charity">
+        <div class="container">
+            <div class="section-header slide-up">
+                <h2 class="section-title">Our Charity Work</h2>
+                <p>At Eldred Virtual Solutions, we believe in giving back to the community. Here are some highlights from our philanthropic initiatives.</p>
+            </div>
+            
+            <div class="charity-grid">
+                <!-- Charity Item 1 -->
+                <div class="charity-item slide-up delay-1 tilt-effect">
+                    <div class="charity-image">
+                        <img src="https://i.pinimg.com/736x/63/84/b9/6384b9153db9c90d9aadffc6296187f5.jpg" alt="Charity Event 1">
+                        <div class="charity-overlay">
+                            <h3>Education for All</h3>
+                            <p>Sponsoring school supplies for underprivileged children in local communities.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Charity Item 2 -->
+                <div class="charity-item slide-up delay-2 tilt-effect">
+                    <div class="charity-image">
+                        <img src="https://i.pinimg.com/736x/21/30/31/213031c034d4a9b166ea4ee2fb46dc67.jpg" alt="Charity Event 2">
+                        <div class="charity-overlay">
+                            <h3>Community Feeding</h3>
+                            <p>Monthly food drives serving hundreds of families in need.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Charity Item 3 -->
+                <div class="charity-item slide-up delay-3 tilt-effect">
+                    <div class="charity-image">
+                        <img src="https://i.pinimg.com/736x/3f/31/f9/3f31f9f849cd18ebc420a2220ff296fe.jpg" alt="Charity Event 3">
+                        <div class="charity-overlay">
+                            <h3>Disaster Relief</h3>
+                            <p>Providing emergency support to communities affected by natural disasters.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Charity Item 4 -->
+                <div class="charity-item slide-up delay-4 tilt-effect">
+                    <div class="charity-image">
+                        <img src="https://i.pinimg.com/736x/93/26/f9/9326f9f0ee39a954f8a76db50ed3e2f8.jpg" alt="Charity Event 4">
+                        <div class="charity-overlay">
+                            <h3>Environmental Cleanup</h3>
+                            <p>Organizing beach and park cleanups to protect our environment.</p>
+                        </div>
                     </div>
                 </div>
             </div>
             
-            <!-- Charity Item 2 -->
-            <div class="charity-item slide-up delay-2 tilt-effect">
-                <div class="charity-image">
-                    <img src="https://i.pinimg.com/736x/21/30/31/213031c034d4a9b166ea4ee2fb46dc67.jpg" alt="Charity Event 2">
-                    <div class="charity-overlay">
-                        <h3>Community Feeding</h3>
-                        <p>Monthly food drives serving hundreds of families in need.</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Charity Item 3 -->
-            <div class="charity-item slide-up delay-3 tilt-effect">
-                <div class="charity-image">
-                    <img src="https://i.pinimg.com/736x/3f/31/f9/3f31f9f849cd18ebc420a2220ff296fe.jpg" alt="Charity Event 3">
-                    <div class="charity-overlay">
-                        <h3>Disaster Relief</h3>
-                        <p>Providing emergency support to communities affected by natural disasters.</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Charity Item 4 -->
-            <div class="charity-item slide-up delay-4 tilt-effect">
-                <div class="charity-image">
-                    <img src="https://i.pinimg.com/736x/93/26/f9/9326f9f0ee39a954f8a76db50ed3e2f8.jpg" alt="Charity Event 4">
-                    <div class="charity-overlay">
-                        <h3>Environmental Cleanup</h3>
-                        <p>Organizing beach and park cleanups to protect our environment.</p>
-                    </div>
-                </div>
+            <div class="charity-cta slide-up">
+                <p>Want to join us in making a difference? <a href="#contact" class="underline-animation">Contact us</a> to learn about our upcoming charity events.</p>
             </div>
         </div>
-        
-        <div class="charity-cta slide-up">
-            <p>Want to join us in making a difference? <a href="#contact" class="underline-animation">Contact us</a> to learn about our upcoming charity events.</p>
-        </div>
-    </div>
-</section>
+    </section>
 
     <!-- CTA Section -->
     <section class="section cta">
